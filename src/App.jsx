@@ -1,6 +1,8 @@
 import Front_banner from "./FrontPage/Front_banner";
 import Mainnavbar from "./Components/Mainnavbar";
 import Main_Banner from "./FrontPage/Main_Banner";
+import App12 from "./Components/App12";
+import RotatingText from "./Components/RotatingText";
 
 
 function App() {
@@ -8,6 +10,7 @@ function App() {
     <>
     <Mainnavbar></Mainnavbar>
     <Main_Banner></Main_Banner>
+    
     </>
   )
 }

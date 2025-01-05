@@ -1,0 +1,43 @@
+.slider-container {
+    width: 75%;
+    margin: 23px 193px;
+    height: 25rem;
+    overflow: hidden;
+    border-radius: 15px;
+    position: relative;
+  }
+  
+  .slider {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    
+    animation: slide 20s infinite linear;
+  }
+  
+  .card {
+    /* flex: 0 0 33.33%; Each card takes up one-third of the container */
+    padding: 20px;
+    height: 100%;
+    width: 33.33%;
+    background-color: #5f5f5f;
+    margin: 15px ;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    33.33% {
+      transform: translateX(-33.33%); /* Move the cards to the left */
+    }
+    66.66% {
+      transform: translateX(-66.66%); /* Move the cards to the left */
+    }
+    100% {
+      transform: translateX(0); /* Reset the position for smooth loop */
+    }
+  }
+  

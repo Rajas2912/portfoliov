@@ -1,0 +1,36 @@
+.skills-container {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .skills-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 20px;
+  }
+  
+  .images-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .image-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjust the gap between images */
+    margin-bottom: 20px; /* Space between rows */
+  }
+  
+  .image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .circular-image {
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  

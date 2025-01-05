@@ -1,0 +1,66 @@
+.slider-container2 {
+    width: 25%;
+    height: 160px; /* Adjust height to match video size */
+    overflow: hidden;
+    position: relative;
+    
+    /* text-align: center; */
+  }
+ .slider-row2
+ {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; /* Space between the columns */
+    align-items: flex-start;
+ }
+ .vd_title{
+    flex: 1;
+    color: black;
+    text-align: center;
+    font-weight: 500;
+ } 
+  .skills-title2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .slider2 {
+    flex: 3;
+    display: flex;
+    width: 400%; /* 4 videos, each taking up 100% width */
+    animation: slide 20s infinite linear; /* Slow animation */
+  }
+  
+  .video2 {
+    width: 25%; /* Each video takes up 1/4 of the container */
+    height: 100%;
+    display: flex;
+    margin-left: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .video-content2 {
+    width: 100%; /* Ensure the video takes up the full width of the container */
+    height: auto;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-25%); /* Move the videos to the left */
+    }
+    50% {
+      transform: translateX(-50%); /* Move the videos to the left */
+    }
+    75% {
+      transform: translateX(-75%); /* Move the videos to the left */
+    }
+    100% {
+      transform: translateX(0); /* Reset the position for smooth loop */
+    }
+  }
+  

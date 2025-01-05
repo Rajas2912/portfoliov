@@ -2,6 +2,12 @@ import "./Main_Banner.css";
 import banner_img from "../assets/portrait.png";
 import { Button } from "@nextui-org/react";
 import ProjectCard from "../Components/ProjectCard";
+import App12 from "../Components/App12";
+import RotatingText from "../Components/RotatingText";
+import SlidingCards from "../Components/SlidingCards";
+import SkillsSection from "../Components/SkillsSection";
+import Video_Carousel from "../Components/Video_Carousel";
+import Bottom_Video from "../Components/Bottom_Video";
 
 function Main_Banner() {
   return (
@@ -43,9 +49,12 @@ function Main_Banner() {
           </div>
         </div>
         <div className="bottomDiv">
-          <div className="container">
+          <div className="container" id="vc1">
             <div className="row">
-              <div className="bd1">Contact me</div>
+              <RotatingText></RotatingText>
+                <Bottom_Video></Bottom_Video>
+        
+              
               <div className="bd2">Machine Learning</div>
               <div className="bd2">Artificial Intelligence</div>
               <div className="bd2">ReactJS</div>
@@ -53,18 +62,29 @@ function Main_Banner() {
               <Button color="default" variant="shadow">
                 Projects
               </Button>
+              
             </div>
           </div>
         </div>
         <div className="proj1">
           <div className="flex items-center">
             <div className="flex-grow border-t border-gray-300"></div>
-            <span className="px-4">My Recent Projects</span>
+            <span className="px-4" style={{color:"black",fontSize:"1.5rem",margin:"10px"}}>My Recent Projects</span>
             <div className="flex-grow border-t border-gray-300"></div>
           </div>
           <ProjectCard></ProjectCard>
         </div>
+        {/* <div className="container">
+          <div className="row">
+          <SlidingCards></SlidingCards>
+          </div>
+        </div> */}
+        
+        <SkillsSection></SkillsSection>
+        <Video_Carousel></Video_Carousel>
       </div>
+      
+     
     </>
   );
 }
