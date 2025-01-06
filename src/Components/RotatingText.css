@@ -26,6 +26,7 @@ body {
   @keyframes rotate-circle {
     to {
       transform: rotate(1turn);
+
     }
   }
   

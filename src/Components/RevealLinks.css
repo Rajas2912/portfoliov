@@ -1,0 +1,32 @@
+.reveal-links-container {
+    display: grid;
+    place-content: center;
+    gap: 2rem;
+    background-color: #a3d5a3; /* Green background */
+    padding: 3rem 2rem;
+    color: black;
+    text-align: center;
+  }
+  
+  .flip-link {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    line-height: 1.2;
+  }
+  
+  .flip-link .flip-char {
+    display: inline-block;
+  }
+  
+  .flip-link .flip-overlay {
+    position: absolute;
+    inset: 0;
+  }
+  

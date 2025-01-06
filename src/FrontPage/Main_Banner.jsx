@@ -1,4 +1,5 @@
 import "./Main_Banner.css";
+import Mainnavbar from "../Components/Mainnavbar";
 import banner_img from "../assets/portrait.png";
 import { Button } from "@nextui-org/react";
 import ProjectCard from "../Components/ProjectCard";
@@ -8,10 +9,12 @@ import SlidingCards from "../Components/SlidingCards";
 import SkillsSection from "../Components/SkillsSection";
 import Video_Carousel from "../Components/Video_Carousel";
 import Bottom_Video from "../Components/Bottom_Video";
-
+import { RevealLinks } from "../Components/RevealLinks";
+import AboutMe from "./AboutMe";
 function Main_Banner() {
   return (
     <>
+    <Mainnavbar></Mainnavbar>
       <div className="frontPage">
         <div className="topDiv">
           <div className="container">
@@ -24,7 +27,7 @@ function Main_Banner() {
         <div className="container">
           <div
             className="row"
-            style={{ margin: "38px 200px", display: "flex" }}
+            style={{ margin: "40px 200px", display: "flex" }}
           >
             <div className="colText" style={{ padding: "3%" }}>
               <h1 className="title">SOFTWARE DEVELOPER</h1>
@@ -54,11 +57,7 @@ function Main_Banner() {
               <RotatingText></RotatingText>
                 <Bottom_Video></Bottom_Video>
         
-              
-              <div className="bd2">Machine Learning</div>
-              <div className="bd2">Artificial Intelligence</div>
-              <div className="bd2">ReactJS</div>
-              <div className="bd2">DSA</div>
+              <App12></App12>
               <Button color="default" variant="shadow">
                 Projects
               </Button>
@@ -67,9 +66,9 @@ function Main_Banner() {
           </div>
         </div>
         <div className="proj1">
-          <div className="flex items-center">
+          <div className="flex items-center" style={{margin:"10px 200px"}}>
             <div className="flex-grow border-t border-gray-300"></div>
-            <span className="px-4" style={{color:"black",fontSize:"1.5rem",margin:"10px"}}>My Recent Projects</span>
+            <span className="px-4" style={{color:"black",fontSize:"1.5rem"}}>My Recent Projects</span>
             <div className="flex-grow border-t border-gray-300"></div>
           </div>
           <ProjectCard></ProjectCard>
@@ -81,7 +80,8 @@ function Main_Banner() {
         </div> */}
         
         <SkillsSection></SkillsSection>
-        <Video_Carousel></Video_Carousel>
+        {/* <Video_Carousel></Video_Carousel> */}
+        <AboutMe></AboutMe>
       </div>
       
      
