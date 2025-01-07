@@ -1,8 +1,6 @@
 import React from "react";
 import "./Bottom_video.css"; // Import your CSS for the sliding effect
-import video2 from "../assets/Video/valo1.mp4";
-import video3 from "../assets/Video/valo2.mp4";
-import video4 from "../assets/Video/valo3.mp4";
+
 
 const Bottom_Video = () => {
   return (
