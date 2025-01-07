@@ -15,35 +15,36 @@ export const AcmeLogo = () => {
 
 export default function Mainnavbar() {
   return (
-    <Navbar shouldHideOnScroll>
+    <Navbar shouldHideOnScroll >
       <NavbarBrand>
         <AcmeLogo />
-        <p className="font-bold text-inherit">ACME</p>
+        <p className="font-bold text-inherit">Rajas Bhosale</p>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
           <Link color="foreground" href="#">
-            Features
+            Resume
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
           <Link aria-current="page" href="#">
-            Customers
+            Certifications
           </Link>
         </NavbarItem>
         <NavbarItem>
           <Link color="foreground" href="#">
-            Integrations
+            Projects
           </Link>
+
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
+          <Link href="#">About</Link>
         </NavbarItem>
         <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
-            Sign Up
+          <Button as={Link} color="default" href="#" variant="flat">
+            Resume
           </Button>
         </NavbarItem>
       </NavbarContent>

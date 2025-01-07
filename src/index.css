@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: "SuissenIntl";
+    src: local("SuissenIntl-Regular"),
+      url("./assets/Fonts/SuisseIntl-Regular.ttf") format("truetype");
+    font-weight: normal;
+  }

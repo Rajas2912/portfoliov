@@ -7,6 +7,7 @@ import { RevealLinks } from "./Components/RevealLinks";
 import { BrowserRouter, Route, Routes } from "react-router-dom"; // Use BrowserRouter instead of Router
 import ResumePage from "./ResumePage/ResumePage";
 import ResumeMain from "./ResumePage/Resume_Main";
+import Certificate from "./Certifications/Certificate";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Main_Banner />} />
         <Route path="/resume" element={<ResumeMain />} />
+        <Route path="/certifications" element={<Certificate></Certificate>} />
       </Routes>
     </BrowserRouter>
   );
