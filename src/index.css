@@ -8,3 +8,10 @@
       url("./assets/Fonts/SuisseIntl-Regular.ttf") format("truetype");
     font-weight: normal;
   }
+
+  @font-face {
+    font-family: "Akira";
+    src: local("AkiraExpanded"),
+      url("./assets/Fonts/AkiraExpanded.otf") format("opentype");
+    font-weight: normal;
+  }

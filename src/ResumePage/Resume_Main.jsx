@@ -1,3 +1,4 @@
+import PdfViewer from "../Components/PdfViewer";
 import ResumePage from "./ResumePage";
 import { pdfjs } from "react-pdf";
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
@@ -8,7 +9,8 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 function ResumeMain(){
     return(
         <>
-        <ResumePage></ResumePage>
+        <PdfViewer></PdfViewer>
+        
         </>
     );
 }

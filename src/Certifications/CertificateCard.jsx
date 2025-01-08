@@ -11,13 +11,15 @@ import {
 import mlimg from "../assets/ml.png";
 import pythonimg from "../assets/python.png";
 import reactimg from "../assets/reactjs.png";
+import PdfViewer from "../Components/PdfViewer";
+import SidebarWithIframe from "./SidebarWithIframe";
 
 function CertificateCard() {
   return (
     <>
-      <div className="cert_proj">
+      <div className="cert_proj" style={{margin: "50px 50px",padding:"30px 30px",backgroundColor:"#c3c3c3"}}>
         <div className="container">
-          <div className="row gap-2" style={{margin: "50px 60px"}}>
+          {/* <div className="row gap-2" style={{margin: "50px 60px"}}>
             <Card className="py-4">
               <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                 <p className="text-tiny uppercase font-bold">Deep Learning</p>
@@ -109,7 +111,9 @@ function CertificateCard() {
                 />
               </CardBody>
             </Card>
-          </div>
+          </div> */}
+          {/* <PdfViewer></PdfViewer> */}
+          <SidebarWithIframe></SidebarWithIframe>
         </div>
       </div>
     </>
