@@ -1,6 +1,7 @@
 import "./Main_Banner.css";
 import Mainnavbar from "../Components/Mainnavbar";
 import banner_img from "../assets/portrait.png";
+import potrait2_img from "../assets/Potrait2.jpg";
 import { Button } from "@nextui-org/react";
 import ProjectCard from "../Components/ProjectCard";
 import App12 from "../Components/App12";
@@ -19,7 +20,7 @@ function Main_Banner() {
         <div className="topDiv">
           <div className="container">
             <div className="row">
-              <div className="name1">Hi I'm Rajas,</div>
+              <div className="name1" style={{fontFamily:"Akira"}}>Hi I'm Rajas,</div>
               <button className="btn1">Night Mode</button>
             </div>
           </div>
@@ -29,14 +30,10 @@ function Main_Banner() {
             className="row"
             style={{ margin: "40px 200px", display: "flex" }}
           >
-            <div className="colText" style={{ padding: "3%" }}>
-              <h1 className="title">SOFTWARE DEVELOPER</h1>
-              <p className="lead">
-                Quickly design and customize responsive mobile-first sites with
-                Bootstrap, the world’s most popular front-end open source
-                toolkit, featuring Sass variables and mixins, responsive grid
-                system, extensive prebuilt components, and powerful JavaScript
-                plugins.
+            <div className="colText" style={{ padding: "3%" ,}}>
+              <h1 className="title" >SOFTWARE DEVELOPER</h1>
+              <p className="lead" style={{fontSize:"1.3rem"}}>
+              AI enthusiast, full-stack developer, and innovator passionate about building real-world solutions and sharing knowledge through projects and workshops.
               </p>
             </div>
             <div className="colImage">
