@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"; // Use BrowserR
 import ResumePage from "./ResumePage/ResumePage";
 import ResumeMain from "./ResumePage/Resume_Main";
 import Certificate from "./Certifications/Certificate";
+import Project_page from "./ProjectsPage/Project_page";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Main_Banner />} />
         <Route path="/resume" element={<ResumeMain />} />
         <Route path="/certifications" element={<Certificate></Certificate>} />
+        <Route path="/projects" element={<Project_page></Project_page>} />
       </Routes>
     </BrowserRouter>
   );
