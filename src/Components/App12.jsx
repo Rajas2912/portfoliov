@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence, color } from "framer-motion";
 import "./App12.css";
 
-const TEXTS = ["Machine Learning", "Artificial Intelligence", "WebDev", "DSA"];
+const TEXTS = ["MACHINE LEARNING", "ARTIFICIAL INTELLIGENCE", "WEBDEV", "DSA"];
 const DURATION = 2;
 
 const App12 = () => {
@@ -23,7 +23,7 @@ const App12 = () => {
           initial={{ y: "100%", opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: "-100%", opacity: 0 }}
-          style={{color:"grey" ,fontSize:"2rem"}}
+          style={{color:"grey" ,fontSize:"1.6rem",fontWeight:"200"}}
           transition={{ duration: 0.5, ease: "easeInOut" }}
           className="reveal-text"
         >

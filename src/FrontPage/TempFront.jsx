@@ -14,18 +14,17 @@ import { RevealLinks } from "../Components/RevealLinks";
 import AboutMe from "./AboutMe";
 import Footer from "../Components/Footer";
 import Typewriter from "typewriter-effect";
-import { NewNavbar } from "../FramerMotion/NewNavbar";
-function Main_Banner() {
+function TempFront() {
   return (
     <>
-    {/* <Mainnavbar></Mainnavbar> */}
-    <NewNavbar></NewNavbar>
+    
+    <Mainnavbar></Mainnavbar>
       <div className="frontPage">
         <div className="topDiv">
           <div className="container">
             <div className="row">
               <div className="name1" style={{fontFamily:"Akira"}}>Hi I'm Rajas,</div>
-              {/* <button className="btn1">Night Mode</button> */}
+              <button className="btn1">Night Mode</button>
             </div>
           </div>
         </div>
@@ -83,8 +82,14 @@ function Main_Banner() {
           </div>
           <ProjectCard></ProjectCard>
         </div>
+        {/* <div className="container">
+          <div className="row">
+          <SlidingCards></SlidingCards>
+          </div>
+        </div> */}
         
         <SkillsSection></SkillsSection>
+        {/* <Video_Carousel></Video_Carousel> */}
         <AboutMe></AboutMe>
       </div>
       
@@ -92,4 +97,4 @@ function Main_Banner() {
     </>
   );
 }
-export default Main_Banner;
+export default TempFront;
