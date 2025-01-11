@@ -1,0 +1,95 @@
+/* Card container */
+.card2 {
+    position: relative;
+    border-radius: 20px;
+    border: solid 2px #d9d9d9;
+    overflow: hidden;
+    width: 33.33%;
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  /* Hover effect */
+  .card2:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Wrapper for the image */
+  .imageWrapper {
+    position: relative;
+    height: 150px; /* Adjust height as needed */
+    overflow: hidden;
+    border-radius: 20px;
+  }
+  
+  /* Image style */
+  .image2 {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+    /* border: solid 2px grey; */
+    filter: blur(0);
+    transition: filter 0.3s;
+  }
+  
+  /* Blurred effect at the bottom of the image */
+  .imageWrapper::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Adjust blur height */
+    background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(197, 228, 248, 0.3) 100%);
+    pointer-events: none;
+  }
+  
+  /* Card body overlapping the image */
+  .card_body2 {
+    position: absolute;
+    top: 100px; /* Adjust based on where the body starts */
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px 10px 0 0;
+    z-index: 1;
+  }
+  .card_title{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-family: 'Akira';
+    font-size: 1rem;
+    flex-direction: column;
+  }
+  
+  /* Project info text */
+  .info2 {
+    font-size: 1rem;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* Footer with GitHub icon */
+  .footer_title {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+  }
+  
+  .githubIcon {
+    font-size: 1.5rem;
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  .githubIcon:hover {
+    color: #007bff;
+  }
+  

@@ -10,12 +10,14 @@ import ResumeMain from "./ResumePage/Resume_Main";
 import Certificate from "./Certifications/Certificate";
 import Project_page from "./ProjectsPage/Project_page";
 import About_Main from "./AboutPage/About_Main";
+import FrontPage from "./FramerMotion/FrontPage";
 
 function App() {
   return (
     <BrowserRouter> {/* Use BrowserRouter to wrap your Routes */}
       <Routes>
-        <Route path="/" element={<Main_Banner />} />
+        <Route path="/" element={<Main_Banner></Main_Banner>} />
+        <Route path="/framerCard" element={<FrontPage></FrontPage>} />
         <Route path="/resume" element={<ResumeMain />} />
         <Route path="/certifications" element={<Certificate></Certificate>} />
         <Route path="/projects" element={<Project_page></Project_page>} />
