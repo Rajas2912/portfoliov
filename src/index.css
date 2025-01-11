@@ -15,3 +15,15 @@
       url("./assets/Fonts/AkiraExpanded.otf") format("opentype");
     font-weight: normal;
   }
+  @font-face {
+    font-family: "Montserrat-bold";
+    src: local("Montserrat-Bold"),
+      url("./assets/Fonts/Montserrat-Bold.ttf") format("truetype");
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: "Montserrat-Regular";
+    src: local("Montserrat-Regular"),
+      url("./assets/Fonts/Montserrat-Regular.ttf") format("truetype");
+    font-weight: normal;
+  }

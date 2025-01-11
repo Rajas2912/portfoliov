@@ -17,7 +17,7 @@ import SidebarWithIframe from "./SidebarWithIframe";
 function CertificateCard() {
   return (
     <>
-      <div className="cert_proj" style={{margin: "50px 50px",padding:"30px 30px",backgroundColor:"#c3c3c3"}}>
+      <div className="cert_proj" style={{margin: "50px 50px",padding:"30px 30px",backgroundColor:"rgb(239 239 239)"}}>
         <div className="container">
           {/* <div className="row gap-2" style={{margin: "50px 60px"}}>
             <Card className="py-4">

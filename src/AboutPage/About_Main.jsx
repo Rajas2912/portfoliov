@@ -1,29 +1,27 @@
 import Footer from "../Components/Footer";
-import Mainnavbar from "../Components/Mainnavbar";
 import { NewNavbar } from "../FramerMotion/NewNavbar";
-import Proj_sec1 from "./Proj_sec1";
 
-function Project_page() {
-  return (
-    <>
-      <NewNavbar></NewNavbar>
-      <div className="proj_main1" style={{height:"100vh"}}>
+function About_Main()
+{
+    return(
+        <>
+        <NewNavbar></NewNavbar>
+        <div className="about_main" style={{height:"100vh"}}>
         <div className="container">
           <div className="flex items-center" style={{ margin: "60px 183px" }}>
-            {/* <span className="px-4" style={{color:"black",fontSize:"1.5rem"}}>Certifications</span> */}
             <div
               style={{ color: "black", fontSize: "2rem", fontFamily: "Montserrat-Regular" }}
             >
               {" "}
-              PROJECTS
+              About.
             </div>
           </div>
-          <Proj_sec1></Proj_sec1>
+          <About_section></About_section>
           
         </div>
       </div>
       <Footer></Footer>
-    </>
-  );
+        </>
+    );
 }
-export default Project_page;
+export default About_Main;

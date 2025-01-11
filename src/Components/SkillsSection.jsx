@@ -13,7 +13,7 @@ import { Image } from "@nextui-org/react";
 const SkillsSection = () => {
   return (
     <div className="skills-container">
-      <h2 className="skills-title" style={{fontFamily:"Akira"}}>SKILLS</h2>
+      <h2 className="skills-title" style={{fontFamily:"Montserrat-Regular"}}>SKILLS</h2>
       <div className="images-container">
         {/* Row 1 - 4 images */}
         <div className="image-row">

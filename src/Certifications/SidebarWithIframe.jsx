@@ -22,7 +22,7 @@ function SidebarWithIframe() {
 
   return (
     <>
-      <div className="certificate_page">
+      <div className="certificate_page" style={{border:"solid 2px grey"}}>
         <div className="container">
           
             <div style={{ display: "flex", height: "100vh" }}>

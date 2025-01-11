@@ -1,12 +1,12 @@
-.slider-container3 {
-    width: 25%;
-    height: 160px; /* Adjust height to match video size */
+.slider-container2 {
+    width: 100%;
+    height: 310px; /* Adjust height to match video size */
     overflow: hidden;
     position: relative;
     
     /* text-align: center; */
   }
- .slider-row3
+ .slider-row2
  {
     display: flex;
     flex-direction: column;
@@ -25,7 +25,7 @@
     margin-bottom: 20px;
   }
   
-  .slider3 {
+  .slider2 {
     flex: 3;
     display: flex;
     width: 400%; /* 4 videos, each taking up 100% width */

@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { FaLinkedin, FaGithub, FaCode } from "react-icons/fa";
 export const NewNavbar = () => {
   return (
@@ -32,13 +33,22 @@ const SlideTabs = () => {
       }}
       className="relative mx-auto flex w-fit rounded-full border-2 border-grey bg-black p-1"
     >
-      <Tab setPosition={setPosition}>Home</Tab>
-      <Tab setPosition={setPosition}>About</Tab>
-      <Tab setPosition={setPosition}>Certifications</Tab>
-      <Tab setPosition={setPosition}>Projects</Tab>
+      <Tab setPosition={setPosition}>
+        <Link to="/">Home</Link>
+      </Tab>
+      <Tab setPosition={setPosition}>
+      <Link to="/about">About</Link>
+        </Tab>
+      <Tab setPosition={setPosition}>
+      <Link to="/certifications">Certifications</Link>
+        </Tab>
+      <Tab setPosition={setPosition}>
+      <Link to="/projects">Projects</Link>
+        
+        </Tab>
 
       <Tab setPosition={setPosition}>
-        Resume
+      <Link to="/resume">Resume</Link>
       </Tab>
       <Tab setPosition={setPosition}>
                   <a

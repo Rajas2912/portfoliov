@@ -1,12 +1,13 @@
 import React from "react";
 import CertificateCard from "./CertificateCard"; // Adjust the path if necessary
 import Mainnavbar from "../Components/Mainnavbar";
+import { NewNavbar } from "../FramerMotion/NewNavbar";
 
 function Certificate() {
 
   return (
     <>
-    <Mainnavbar></Mainnavbar>
+    <NewNavbar></NewNavbar>
     <div className="proj1" style={{backgroundColor:"#f9f9f9",padding: "10px 60px",borderRadius:"25px"}}>
       <div className="container">
       <div className="flex items-center" style={{margin:"30px 10px"}}>

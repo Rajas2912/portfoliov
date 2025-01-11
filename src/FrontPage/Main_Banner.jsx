@@ -24,7 +24,7 @@ function Main_Banner() {
         <div className="topDiv">
           <div className="container">
             <div className="row">
-              <div className="name1" style={{fontFamily:"Akira"}}>Hi I'm Rajas,</div>
+              <div className="name1" style={{fontFamily:"Montserrat-Regular"}}>Hi I'm Rajas,</div>
               {/* <button className="btn1">Night Mode</button> */}
             </div>
           </div>
@@ -35,7 +35,7 @@ function Main_Banner() {
             style={{ margin: "40px 200px", display: "flex" }}
           >
             <div className="colText" style={{ padding: "3%" ,}}>
-              <div className="title1" style={{fontSize:"3.5rem",fontWeight:"500"}}>
+              <div className="title1" style={{fontSize:"3.5rem",fontWeight:"500",fontFamily:"Montserrat-Regular"}}>
               <Typewriter options={{
                 strings: ['Software Developer','AI Developer','React Developer'],
                 autoStart:true,
@@ -76,9 +76,9 @@ function Main_Banner() {
           </div>
         </div>
         <div className="proj1">
-          <div className="flex items-center" style={{margin:"10px 200px"}}>
+          <div className="flex items-center" style={{margin:"40px 200px"}}>
             <div className="flex-grow border-t border-gray-300"></div>
-            <span className="px-4" style={{color:"black",fontSize:"1.5rem"}}>My Recent Projects</span>
+            <span className="px-4" style={{color:"black",fontSize:"1.5rem",fontFamily:"Montserrat-Regular"}}>My Recent Projects</span>
             <div className="flex-grow border-t border-gray-300"></div>
           </div>
           <ProjectCard></ProjectCard>

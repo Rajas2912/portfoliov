@@ -4,11 +4,11 @@ import "./Bottom_video.css"; // Import your CSS for the sliding effect
 
 const Bottom_Video = () => {
   return (
-    <div className="slider-container2">
-      <div className="slider-row2">
+    <div className="slider-container3">
+      <div className="slider-row3">
         {/* Title Column */}
         {/* Videos Column */}
-        <div className="slider2">
+        <div className="slider3">
           {/* Video 1 */}
           <div className="video2">
             <video className="video-content2" loop muted autoPlay>
