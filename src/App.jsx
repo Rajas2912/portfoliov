@@ -10,7 +10,8 @@ import ResumeMain from "./ResumePage/Resume_Main";
 import Certificate from "./Certifications/Certificate";
 import Project_page from "./ProjectsPage/Project_page";
 import About_Main from "./AboutPage/About_Main";
-import FrontPage from "./FramerMotion/FrontPage";
+import FrontPage from "./Temp_components/FrontPage";
+import Temp12 from "./FramerMotion/Temp12";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Main_Banner></Main_Banner>} />
         <Route path="/framerCard" element={<FrontPage></FrontPage>} />
+        <Route path="/tempframer" element={<Temp12></Temp12>} />
         <Route path="/resume" element={<ResumeMain />} />
         <Route path="/certifications" element={<Certificate></Certificate>} />
         <Route path="/projects" element={<Project_page></Project_page>} />

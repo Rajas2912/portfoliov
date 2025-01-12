@@ -1,8 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
-
+import { useMotionValueEvent, useScroll, useSpring, useTransform } from "framer-motion"
+import { motion } from "framer-motion"
 const SmoothScroll: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
+
+  const [isLoading,setIsLoading] = useState(true);
+
   //get height
   const contentRef = useRef<HTMLDivElement>(null);
   const [contentHeight, setContentHeight] = useState(0);
@@ -23,12 +27,34 @@ const SmoothScroll: React.FC<{ children: React.ReactNode }> = ({
       window.removeEventListener("resize", handleResize);
     };
   }, [contentRef]);
+
+
+  //intercept normal scroll behavior 
+  const { scrollYProgress } = useScroll()
+  const smoothProgress = useSpring(scrollYProgress,{
+    mass:0.1,
+    stiffness:100,
+    damping:20,
+    restDelta:0.001,
+  });
+
+  useMotionValueEvent(smoothProgress,"change",(latest) =>{
+    if(latest === 0){
+      setIsLoading(false);
+    }
+  });
+
+
+  const y = useTransform(smoothProgress,(value) =>{
+    return value * -(contentHeight - WindowHeight);
+  });
+
   return (
     <>
       <div  style={{height:contentHeight}}/>
-      <div className="w-screen fixed top-10 flex flex-col " ref={contentRef}>
+      <motion.div className="w-screen fixed top-0 flex flex-col transition-opacity duration-200 ease-in-out" ref={contentRef} style={{y:isLoading ? 0 : y, opacity:isLoading ? 0 : 1}}>
         {children}
-      </div>
+      </motion.div >
     </>
   );
 };

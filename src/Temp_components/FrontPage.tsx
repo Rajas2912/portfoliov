@@ -2,13 +2,17 @@ import React from "react";
 import "./Front_page_Card.css";
 import { FaGithub } from "react-icons/fa";
 import SmoothScroll from "./SmoothScroll";
+import Main12 from "./Main12";
+
 
 function FrontPage() {
   return (
     <>
     <SmoothScroll>
-    <div className="w-[90%] max-w-3xl mx-auto py-10">
-        <section className="flex flex-col gap-8">
+    <div>
+        <Main12></Main12>
+
+        {/* <section className="flex flex-col gap-8">
           <div className="card2" style={{width:"100%"}}>
             <div className="imageWrapper">
               <img
@@ -160,6 +164,9 @@ function FrontPage() {
             </div>
           </div>
 
+        </section> */}
+        <section>
+          
         </section>
       </div>
     </SmoothScroll>
