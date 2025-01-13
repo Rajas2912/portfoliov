@@ -1,4 +1,6 @@
 import PdfViewer from "../Components/PdfViewer";
+import Example from "../FramerMotion/Example";
+import SmoothscrollTemp from "../FramerMotion/SmoothscrollTemp";
 import ResumePage from "./ResumePage";
 import { pdfjs } from "react-pdf";
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
@@ -9,7 +11,12 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 function ResumeMain(){
     return(
         <>
-        <PdfViewer></PdfViewer>
+        
+            <div>
+            <Example></Example>
+            </div>
+        
+        
         
         </>
     );

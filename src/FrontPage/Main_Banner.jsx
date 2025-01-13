@@ -15,6 +15,7 @@ import AboutMe from "./AboutMe";
 import Footer from "../Components/Footer";
 import Typewriter from "typewriter-effect";
 import { NewNavbar } from "../FramerMotion/NewNavbar";
+import Example from "../FramerMotion/Example";
 function Main_Banner() {
   return (
     <>
@@ -75,14 +76,15 @@ function Main_Banner() {
             </div>
           </div>
         </div>
-        <div className="proj1">
+        {/* <div className="proj1">
           <div className="flex items-center" style={{margin:"40px 200px"}}>
             <div className="flex-grow border-t border-gray-300"></div>
             <span className="px-4" style={{color:"black",fontSize:"1.5rem",fontFamily:"Montserrat-Regular"}}>My Recent Projects</span>
             <div className="flex-grow border-t border-gray-300"></div>
           </div>
           <ProjectCard></ProjectCard>
-        </div>
+        </div> */}
+        {/* <Example></Example> */}
         
         <SkillsSection></SkillsSection>
         <AboutMe></AboutMe>
