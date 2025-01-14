@@ -1,21 +1,25 @@
-import SmoothscrollTemp from "./SmoothscrollTemp";
+
 import React from "react";
 import Main_Banner from "../FrontPage/Main_Banner"
 import Footer from "../Components/Footer";
-function Temp12()
+import TempSmooth from "./TempSmooth";
+function Temp_3()
 {
     return(
 
         <>
-        <SmoothscrollTemp>
+        <TempSmooth>
         <div>
             <Main_Banner></Main_Banner>
         </div>
-        <Footer></Footer>
 
-        </SmoothscrollTemp>
+        </TempSmooth>
+        
+
+
+        
         </>
 
     )
 }
-export default Temp12;
+export default Temp_3;

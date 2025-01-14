@@ -16,6 +16,7 @@ import Footer from "../Components/Footer";
 import Typewriter from "typewriter-effect";
 import { NewNavbar } from "../FramerMotion/NewNavbar";
 import Example from "../FramerMotion/Example";
+import TempHorizontal from "../Temp_components/TempHorizontal";
 function Main_Banner() {
   return (
     <>
@@ -84,7 +85,7 @@ function Main_Banner() {
           </div>
           <ProjectCard></ProjectCard>
         </div> */}
-        {/* <Example></Example> */}
+        <TempHorizontal></TempHorizontal>
         
         <SkillsSection></SkillsSection>
         <AboutMe></AboutMe>
