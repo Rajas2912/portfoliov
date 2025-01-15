@@ -20,7 +20,7 @@ const VerticalCard = ({
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ["start end", "start start"],
+    offset: ['start end','start start'],
   });
   const imagescale = useTransform(scrollYProgress, [0, 1], [2, 1]);
   const scale = useTransform(progress, range, [1, targetScale]);

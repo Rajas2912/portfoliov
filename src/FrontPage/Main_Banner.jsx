@@ -17,7 +17,22 @@ import Typewriter from "typewriter-effect";
 import { NewNavbar } from "../FramerMotion/NewNavbar";
 import Example from "../FramerMotion/Example";
 import TempHorizontal from "../Temp_components/TempHorizontal";
+import { useEffect, useRef } from "react";
+import Lenis from "lenis";
 function Main_Banner() {
+
+
+  useEffect(() => {
+    const lenis = new Lenis();
+    function raf(time){
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+    requestAnimationFrame(raf)
+  }, []);
+
+
+
   return (
     <>
     {/* <Mainnavbar></Mainnavbar> */}

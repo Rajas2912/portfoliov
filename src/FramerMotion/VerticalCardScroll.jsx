@@ -1,34 +1,42 @@
 import VerticalCard from "../Temp_components/VerticalCard";
-import "./VerticalCardScroll.css"
-import postimg from "../assets/postman.png"
-import reactjsimg from "../assets/reactjs.png"
-import {motion , useScroll} from "framer-motion";
+import "./VerticalCardScroll.css";
+import postimg from "../assets/postman.png";
+import reactjsimg from "../assets/reactjs.png";
+import { motion, useScroll } from "framer-motion";
 import { NewNavbar } from "./NewNavbar";
-import { useEffect,useRef } from "react";
-function VerticalCardScroll() {
-  
-  const container = useRef(null);
-  const {scrollYProgress} = useScroll({
-    target:container,
-    offset:['start start','end end']
-  })
-  useEffect(()=>{
-    scrollYProgress.on("change",e => console.log(scrollYProgress))
-  },[] )
+import { useEffect, useRef } from "react";
+import Lenis from "lenis";
 
-    return (
-    
+function VerticalCardScroll() {
+    const container = useRef(null);
+
+    const { scrollYProgress } = useScroll({
+  
+      target: container,
+  
+      offset: ['start start', 'end end']
+  
+    })
+  useEffect(() => {
+    const lenis = new Lenis();
+    function raf(time){
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+    requestAnimationFrame(raf)
+  }, []);
+
+  return (
     <>
-    <NewNavbar></NewNavbar>
-    <main className="main23">
+      <NewNavbar></NewNavbar>
+      <main ref={container} className="main23">
         {projects.map((project, i) => {
-        const targetScale = 1-((projects.length - i) * 0.05);
-          <VerticalCard key={`p_${i}`} i ={i}  {...project} progress ={scrollYProgress}  range={[i*0.25 , 1]} targetScale={targetScale} />
-})}
+const targetScale = 1 - ( (projects.length - i) * 0.05);
+
+return <VerticalCard key={`p_${i}`} i={i} {...project} progress={scrollYProgress} range={[i * .25, 1]} targetScale={targetScale}/>
+        })}
       </main>
     </>
-
-    
   );
 }
 export default VerticalCardScroll;
