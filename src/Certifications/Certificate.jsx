@@ -2,9 +2,17 @@ import React from "react";
 import CertificateCard from "./CertificateCard"; // Adjust the path if necessary
 import Mainnavbar from "../Components/Mainnavbar";
 import { NewNavbar } from "../FramerMotion/NewNavbar";
-
+import { useEffect, useRef } from "react";
+import Lenis from "lenis";
 function Certificate() {
-
+  useEffect(() => {
+    const lenis = new Lenis();
+    function raf(time){
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+    requestAnimationFrame(raf)
+  }, []);
   return (
     <>
     <NewNavbar></NewNavbar>

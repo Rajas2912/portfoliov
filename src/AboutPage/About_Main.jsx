@@ -1,8 +1,21 @@
 import Footer from "../Components/Footer";
 import { NewNavbar } from "../FramerMotion/NewNavbar";
-
+import { useEffect, useRef } from "react";
+import Lenis from "lenis";
+import About_section from "./About_section";
 function About_Main()
 {
+
+  useEffect(() => {
+    const lenis = new Lenis();
+    function raf(time){
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+    requestAnimationFrame(raf)
+  }, []);
+
+
     return(
         <>
         <NewNavbar></NewNavbar>

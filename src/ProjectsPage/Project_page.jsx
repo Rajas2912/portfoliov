@@ -2,8 +2,19 @@ import Footer from "../Components/Footer";
 import Mainnavbar from "../Components/Mainnavbar";
 import { NewNavbar } from "../FramerMotion/NewNavbar";
 import Proj_sec1 from "./Proj_sec1";
-
+import { useEffect, useRef } from "react";
+import Lenis from "lenis";
 function Project_page() {
+
+  useEffect(() => {
+    const lenis = new Lenis();
+    function raf(time){
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+    requestAnimationFrame(raf)
+  }, []);
+
   return (
     <>
       <NewNavbar></NewNavbar>

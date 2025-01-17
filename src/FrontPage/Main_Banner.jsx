@@ -19,6 +19,7 @@ import Example from "../FramerMotion/Example";
 import TempHorizontal from "../Temp_components/TempHorizontal";
 import { useEffect, useRef } from "react";
 import Lenis from "lenis";
+import VerticalCardScroll from "../FramerMotion/VerticalCardScroll";
 function Main_Banner() {
 
 
@@ -52,7 +53,7 @@ function Main_Banner() {
             style={{ margin: "40px 200px", display: "flex" }}
           >
             <div className="colText" style={{ padding: "3%" ,}}>
-              <div className="title1" style={{fontSize:"3.5rem",fontWeight:"500",fontFamily:"Montserrat-Regular"}}>
+              <div className="title1" style={{fontSize:"3rem",fontWeight:"500",fontFamily:"Montserrat-Regular"}}>
               <Typewriter options={{
                 strings: ['Software Developer','AI Developer','React Developer'],
                 autoStart:true,
@@ -100,7 +101,8 @@ function Main_Banner() {
           </div>
           <ProjectCard></ProjectCard>
         </div> */}
-        <TempHorizontal></TempHorizontal>
+        {/* <TempHorizontal></TempHorizontal> */}
+        <VerticalCardScroll></VerticalCardScroll>
         
         <SkillsSection></SkillsSection>
         <AboutMe></AboutMe>

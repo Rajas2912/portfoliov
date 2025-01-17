@@ -28,7 +28,7 @@ function VerticalCardScroll() {
 
   return (
     <>
-      <NewNavbar></NewNavbar>
+      {/* <NewNavbar></NewNavbar> */}
       <main ref={container} className="main23">
         {projects.map((project, i) => {
 const targetScale = 1 - ( (projects.length - i) * 0.05);
@@ -43,17 +43,17 @@ export default VerticalCardScroll;
 
 export const projects = [
   {
-    title: "Matthias Leidinger",
+    title: "Vanguard",
     description:
-      "Originally hailing from Austria, Berlin-based photographer Matthias Leindinger is a young creative brimming with talent and ideas.",
+      "Vanguard: Revolutionizing autonomous navigation in conflict zones with ESP32, advanced sensors, and drone collaboration. Powered by Dijkstra’s Algorithm and Machine Learning, it excels in pathfinding, obstacle avoidance, and adaptive navigation.",
     src: postimg,
-    link: "https://www.ignant.com/2023/03/25/ad2186-matthias-leidingers-photographic-exploration-of-awe-and-wonder/",
+    link: "https://https://github.com/Rajas2912/Vanguard",
     color: "#BBACAF",
   },
   {
-    title: "Clément Chapillon",
+    title: "TaskVerify",
     description:
-      "This is a story on the border between reality and imaginary, about the contradictory feelings that the insularity of a rocky, arid, and wild territory provokes”—so French photographer Clément Chapillon describes his latest highly captivating project Les rochers fauves (French for ‘The tawny rocks’).",
+      "Built a full-stack platform to automate assignment evaluation, providing instant AI-powered scores and personalized feedback for students. Teachers can create assignments, view leaderboards, and use chatbot support for assistance. The platform archives submissions securely in the cloud and encourages student engagement through leaderboards. Reactjs , SpringBoot ,MySQL , AI Models",
     src: reactjsimg,
     link: "https://www.ignant.com/2022/09/30/clement-chapillon-questions-geographical-and-mental-isolation-with-les-rochers-fauves/",
     color: "#977F6D",

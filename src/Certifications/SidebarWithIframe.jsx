@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import patent1 from "../assets/Resources/PatentPublishReport.pdf";
 import resume from "../assets/Resources/resume.pdf";
+import nvidia from "../assets/Resources/nvidia.pdf";
+import iitmadras from "../assets/Resources/iitmadras.pdf";
 function SidebarWithIframe() {
   const [selectedCertificate, setSelectedCertificate] = useState(null);
 
@@ -10,11 +12,15 @@ function SidebarWithIframe() {
       pdfUrl: patent1,
     },
     {
-      name: "Machine Learning Certification",
-      pdfUrl: resume,
+      name: "Nvidia Deep Learning Foundation",
+      pdfUrl: nvidia,
     },
     {
-      name: "AI Fundamentals Certification",
+      name: "IIT Madras Foundation Certificate Bsc",
+      pdfUrl: iitmadras,
+    },
+    {
+      name: "Patent : Energy Saving Meter",
       pdfUrl: resume,
     },
     // Add more certificates as needed
