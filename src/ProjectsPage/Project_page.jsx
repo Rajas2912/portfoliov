@@ -26,7 +26,7 @@ function Project_page() {
               style={{ color: "black", fontSize: "2rem", fontFamily: "Montserrat-Regular" }}
             >
               {" "}
-              PROJECTS
+              Projects.
             </div>
           </div>
           <Proj_sec1></Proj_sec1>

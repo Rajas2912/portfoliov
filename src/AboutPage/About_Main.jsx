@@ -20,16 +20,18 @@ function About_Main()
         <>
         <NewNavbar></NewNavbar>
         <div className="about_main" style={{height:"100vh"}}>
-        <div className="container">
-          <div className="flex items-center" style={{ margin: "60px 183px" }}>
+        <div className="container" style={{display:"flex",alignItems:"center",justifyContent:"center"}}>
+          <div className="f12" style={{ margin: "60px 183px" }}>
             <div
               style={{ color: "black", fontSize: "2rem", fontFamily: "Montserrat-Regular" }}
             >
-              {" "}
               About.
             </div>
+            <div className="me_1"style={{display:"flex",alignItems:"center",justifyContent:"center"}}>
+            I’m Rajas Bhosale, skilled in AI, Machine Learning, Python, Data Structures and Algorithms (DSA), and Full-Stack Development. I have a passion for exploring new technologies and applying my skills to solve real-world problems.
+            </div>
           </div>
-          <About_section></About_section>
+          
           
         </div>
       </div>

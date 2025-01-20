@@ -20,7 +20,7 @@ function Certificate() {
       <div className="container">
       <div className="flex items-center" style={{margin:"30px 10px"}}>
       {/* <span className="px-4" style={{color:"black",fontSize:"1.5rem"}}>Certifications</span> */}
-      <div style={{color:"black",fontSize:"2rem",fontFamily:"Akira"}}> Certifications</div>
+      <div style={{color:"black",fontSize:"2rem",fontFamily:"Montserrat-Regular"}}> Certifications.</div>
     </div>
     <CertificateCard></CertificateCard>
       </div>

@@ -14,6 +14,8 @@ import FrontPage from "./Temp_components/FrontPage";
 import Temp12 from "./FramerMotion/Temp12";
 import Temp_3 from "./Temp_components/Temp_3";
 import VerticalCardScroll from "./FramerMotion/VerticalCardScroll";
+import Contact_Page from "./ContactMe/ContactPage";
+import ContactPage from "./ContactMe/ContactPage";
 
 function App() {
   return (
@@ -21,9 +23,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Main_Banner></Main_Banner>} />
         <Route path="/framerCard" element={<FrontPage></FrontPage>} />
-        <Route path="/tempframer" element={<Temp12></Temp12>} />
-        <Route path="/smooth" element={<Temp_3></Temp_3>} />
-        <Route path="/vertical" element={<VerticalCardScroll></VerticalCardScroll>} />
+        {/* <Route path="/tempframer" element={<Temp12></Temp12>} />
+        <Route path="/smooth" element={<Temp_3></Temp_3>} /> */}
+        {/* <Route path="/vertical" element={<VerticalCardScroll></VerticalCardScroll>} /> */}
+        <Route path="/contact" element={<ContactPage></ContactPage>} />
         <Route path="/resume" element={<ResumeMain />} />
         <Route path="/certifications" element={<Certificate></Certificate>} />
         <Route path="/projects" element={<Project_page></Project_page>} />

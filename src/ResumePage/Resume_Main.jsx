@@ -26,7 +26,11 @@ function ResumeMain() {
   return (
     <>
       <NewNavbar></NewNavbar>
-      <div className="container" style={{display:"flex",width:"70%",alignItems:"center",justifyContent:"center"}}>
+
+      <div className="container" style={{display:"flex",width:"70%",alignItems:"flex-start",justifyContent:"center",flexDirection:"column",height:"170vh",marginBottom:"100px",marginTop:"40px"}}>
+      <div className="resume_main121" style={{fontFamily:"Montserrat-Regular",fontSize:"2rem",marginTop:"15px",marginBottom:"30px"}}>
+        My Resume.
+      </div>
       <div
         className="res121"
         style={{
