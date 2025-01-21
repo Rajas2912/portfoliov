@@ -25,7 +25,7 @@ function App() {
         <Route path="/framerCard" element={<FrontPage></FrontPage>} />
         {/* <Route path="/tempframer" element={<Temp12></Temp12>} />
         <Route path="/smooth" element={<Temp_3></Temp_3>} /> */}
-        {/* <Route path="/vertical" element={<VerticalCardScroll></VerticalCardScroll>} /> */}
+        <Route path="/vertical" element={<VerticalCardScroll></VerticalCardScroll>} />
         <Route path="/contact" element={<ContactPage></ContactPage>} />
         <Route path="/resume" element={<ResumeMain />} />
         <Route path="/certifications" element={<Certificate></Certificate>} />
