@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Lenis from "lenis";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
@@ -11,9 +11,7 @@ import "./Main_Banner.css";
 import banner_img from "../assets/portrait.png";
 import HorizontalScroll from "../Components/HorizontalScroll";
 import ScrollingCards from "../Components/ScrollingCards";
-import CardMarquee from "../Components/Cardmarquee";
-import HorizontalCardMarquee from "../Components/Cardmarquee";
-import MarqueeCards from "../Components/Cardmarquee";
+import SidebarWithIframe from "../Certifications/SidebarWithIframe";
 
 function Main_Banner() {
   // Smooth scrolling setup
@@ -62,9 +60,11 @@ function Main_Banner() {
     }
   };
 
-  // In-view detection
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.1 });
+  // Refs for section scrolling
+  const aboutRef = useRef(null);
+  const projectsRef = useRef(null);
+  const certificationsRef = useRef(null);
+  const skillsRef = useRef(null);
 
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans">
@@ -120,12 +120,6 @@ function Main_Banner() {
                   building real-world solutions and sharing knowledge through 
                   projects and workshops.
                 </motion.p>
-                
-                <motion.div variants={itemVariants}>
-                  <button className="px-8 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition-colors">
-                    View Projects
-                  </button>
-                </motion.div>
               </motion.div>
               
               <motion.div 
@@ -144,43 +138,54 @@ function Main_Banner() {
             </motion.div>
           </div>
         </section>
-        <section>
-         <MarqueeCards></MarqueeCards>
-        </section>
-        <section>
-          <HorizontalScroll></HorizontalScroll>
-        </section>
 
-        {/* Projects Section
-        <section 
-          ref={ref}
-          className="px-6 md:px-12 lg:px-24 py-12 bg-gray-50"
-        >
-          <div className="container mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6 }}
-              className="mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-light text-center">
-                Selected <span className="font-medium text-black">Projects</span>
-              </h2>
-              <div className="w-24 h-0.5 bg-gray-300 mx-auto mt-4"></div>
-            </motion.div>
-            
-            <VerticalCardScroll />
+        {/* Marquee Section */}
+        <section className="py-12 bg-gray-50">
+          <div className="overflow-hidden">
+            <div className="flex animate-marquee whitespace-nowrap">
+              {[
+                { title: "Resume", count: "Download" },
+                { title: "Experience", count: "4+ Years" },
+                { title: "Projects", count: "15+" },
+                { title: "Certifications", count: "8+" },
+                { title: "Publications", count: "3" }
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="mx-4 p-4 bg-white rounded-lg shadow-md min-w-[200px] text-center"
+                >
+                  <h3 className="text-xl font-semibold">{item.title}</h3>
+                  <p className="text-gray-600">{item.count}</p>
+                </div>
+              ))}
+            </div>
           </div>
-        </section> */}
-
-        {/* Skills Section */}
-        <section className="px-6 md:px-12 lg:px-24 py-24">
-          <SkillsSection />
         </section>
 
         {/* About Section */}
-        <section className="px-6 md:px-12 lg:px-24 py-12 bg-gray-50">
+        <section ref={aboutRef} id="about" className="py-24 bg-white">
           <AboutMe />
+        </section>
+
+        {/* Projects Section */}
+        <section ref={projectsRef} id="projects" className="py-24 bg-gray-50">
+          <div className="container mx-auto px-6">
+            <h2 className="text-3xl font-bold text-center mb-12">Featured Projects</h2>
+            <HorizontalScroll />
+          </div>
+        </section>
+
+        {/* Skills Section */}
+        <section ref={skillsRef} id="skills" className="py-24 bg-white">
+          <SkillsSection />
+        </section>
+
+        {/* Certifications Section */}
+        <section ref={certificationsRef} id="certifications" className="py-24 bg-gray-50">
+          <div className="container mx-auto px-6">
+            <h2 className="text-3xl font-bold text-center mb-12">Certifications</h2>
+            <SidebarWithIframe />
+          </div>
         </section>
       </motion.main>
 
