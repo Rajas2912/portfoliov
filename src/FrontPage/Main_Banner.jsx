@@ -1,115 +1,192 @@
-import "./Main_Banner.css";
-import Mainnavbar from "../Components/Mainnavbar";
-import banner_img from "../assets/portrait.png";
-import potrait2_img from "../assets/Potrait2.jpg";
-import { Button } from "@nextui-org/react";
-import ProjectCard from "../Components/ProjectCard";
-import App12 from "../Components/App12";
-import RotatingText from "../Components/RotatingText";
-import SlidingCards from "../Components/SlidingCards";
-import SkillsSection from "../Components/SkillsSection";
-import Video_Carousel from "../Components/Video_Carousel";
-import Bottom_Video from "../Components/Bottom_Video";
-import { RevealLinks } from "../Components/RevealLinks";
-import AboutMe from "./AboutMe";
-import Footer from "../Components/Footer";
-import Typewriter from "typewriter-effect";
-import { NewNavbar } from "../FramerMotion/NewNavbar";
-import Example from "../FramerMotion/Example";
-import TempHorizontal from "../Temp_components/TempHorizontal";
 import { useEffect, useRef } from "react";
 import Lenis from "lenis";
+import { motion, useInView, AnimatePresence } from "framer-motion";
+import { Typewriter } from "react-simple-typewriter";
+import { NewNavbar } from "../FramerMotion/NewNavbar";
 import VerticalCardScroll from "../FramerMotion/VerticalCardScroll";
+import SkillsSection from "../Components/SkillsSection";
+import AboutMe from "./AboutMe";
+import Footer from "../Components/Footer";
+import "./Main_Banner.css";
+import banner_img from "../assets/portrait.png";
+import HorizontalScroll from "../Components/HorizontalScroll";
+import ScrollingCards from "../Components/ScrollingCards";
+import CardMarquee from "../Components/Cardmarquee";
+import HorizontalCardMarquee from "../Components/Cardmarquee";
+import MarqueeCards from "../Components/Cardmarquee";
+
 function Main_Banner() {
-
-
+  // Smooth scrolling setup
   useEffect(() => {
     const lenis = new Lenis();
-    function raf(time){
-        lenis.raf(time)
-        requestAnimationFrame(raf)
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
     }
-    requestAnimationFrame(raf)
+    requestAnimationFrame(raf);
   }, []);
 
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3
+      }
+    }
+  };
 
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const imageVariants = {
+    hidden: { scale: 0.9, opacity: 0 },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+        ease: "anticipate"
+      }
+    }
+  };
+
+  // In-view detection
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
 
   return (
-    <>
-    {/* <Mainnavbar></Mainnavbar> */}
-    <NewNavbar></NewNavbar>
-      <div className="frontPage">
-        <div className="topDiv">
-          <div className="container">
-            <div className="row">
-              <div className="name1" style={{fontFamily:"Montserrat-Regular"}}>Hi I'm Rajas,</div>
-              {/* <button className="btn1">Night Mode</button> */}
-            </div>
-          </div>
-        </div>
-        <div className="container">
-          <div
-            className="row"
-            style={{ margin: "40px 200px", display: "flex" }}
-          >
-            <div className="colText" style={{ padding: "3%" ,}}>
-              <div className="title1" style={{fontSize:"3rem",fontWeight:"500",fontFamily:"Montserrat-Regular"}}>
-              <Typewriter options={{
-                strings: ['Software Developer','AI Developer','React Developer'],
-                autoStart:true,
-                loop:true,
-                cursor:'_'
-              }} />
-              </div>
-
-              {/* <h1 className="title" >SOFTWARE DEVELOPER</h1> */}
-              <p className="lead" style={{fontSize:"1.3rem"}}>
-              AI enthusiast, full-stack developer, and innovator passionate about building real-world solutions and sharing knowledge through projects and workshops.
-              </p>
-            </div>
-            <div className="colImage">
-              <img
-                src={banner_img}
-                className="bannerImage"
-                alt="Bootstrap Themes"
-                width="400"
-                height="500"
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="bottomDiv">
-          <div className="container" id="vc1">
-            <div className="row">
-              <RotatingText></RotatingText>
-                <Bottom_Video></Bottom_Video>
-        
-              <App12></App12>
-              <Button color="default" variant="shadow">
-                Projects
-              </Button>
-              
-            </div>
-          </div>
-        </div>
-        {/* <div className="proj1">
-          <div className="flex items-center" style={{margin:"40px 200px"}}>
-            <div className="flex-grow border-t border-gray-300"></div>
-            <span className="px-4" style={{color:"black",fontSize:"1.5rem",fontFamily:"Montserrat-Regular"}}>My Recent Projects</span>
-            <div className="flex-grow border-t border-gray-300"></div>
-          </div>
-          <ProjectCard></ProjectCard>
-        </div> */}
-        {/* <TempHorizontal></TempHorizontal> */}
-        <VerticalCardScroll></VerticalCardScroll>
-        
-        <SkillsSection></SkillsSection>
-        <AboutMe></AboutMe>
-      </div>
+    <div className="min-h-screen bg-white text-gray-900 font-sans">
+      <NewNavbar />
       
-     <Footer></Footer>
-    </>
+      <motion.main
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+        className="pt-24"
+      >
+        {/* Hero Section */}
+        <section className="px-6 md:px-12 lg:px-24 py-12 md:py-24">
+          <div className="container mx-auto">
+            <motion.div 
+              className="flex flex-col lg:flex-row items-center justify-between gap-12"
+              variants={containerVariants}
+            >
+              <motion.div 
+                className="lg:w-1/2 space-y-6"
+                variants={itemVariants}
+              >
+                <motion.p 
+                  className="text-lg text-gray-600"
+                  variants={itemVariants}
+                >
+                  Hi I'm Rajas,
+                </motion.p>
+                
+                <motion.h1 
+                  className="text-4xl md:text-5xl lg:text-6xl font-light leading-tight"
+                  variants={itemVariants}
+                >
+                  <span className="block">I build</span>
+                  <span className="font-medium text-black">
+                    <Typewriter
+                      words={['AI solutions', 'web experiences', 'scalable systems']}
+                      loop={true}
+                      cursor
+                      cursorStyle="_"
+                      typeSpeed={70}
+                      deleteSpeed={50}
+                      delaySpeed={1000}
+                    />
+                  </span>
+                </motion.h1>
+                
+                <motion.p 
+                  className="text-lg text-gray-600 max-w-lg"
+                  variants={itemVariants}
+                >
+                  AI enthusiast, full-stack developer, and innovator passionate about 
+                  building real-world solutions and sharing knowledge through 
+                  projects and workshops.
+                </motion.p>
+                
+                <motion.div variants={itemVariants}>
+                  <button className="px-8 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition-colors">
+                    View Projects
+                  </button>
+                </motion.div>
+              </motion.div>
+              
+              <motion.div 
+                className="lg:w-1/2 flex justify-center"
+                variants={imageVariants}
+              >
+                <div className="relative">
+                  <div className="absolute -inset-4 bg-gray-200 rounded-2xl -z-10"></div>
+                  <img
+                    src={banner_img}
+                    alt="Rajas Portrait"
+                    className="rounded-xl w-full max-w-md object-cover"
+                  />
+                </div>
+              </motion.div>
+            </motion.div>
+          </div>
+        </section>
+        <section>
+         <MarqueeCards></MarqueeCards>
+        </section>
+        <section>
+          <HorizontalScroll></HorizontalScroll>
+        </section>
+
+        {/* Projects Section
+        <section 
+          ref={ref}
+          className="px-6 md:px-12 lg:px-24 py-12 bg-gray-50"
+        >
+          <div className="container mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6 }}
+              className="mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-light text-center">
+                Selected <span className="font-medium text-black">Projects</span>
+              </h2>
+              <div className="w-24 h-0.5 bg-gray-300 mx-auto mt-4"></div>
+            </motion.div>
+            
+            <VerticalCardScroll />
+          </div>
+        </section> */}
+
+        {/* Skills Section */}
+        <section className="px-6 md:px-12 lg:px-24 py-24">
+          <SkillsSection />
+        </section>
+
+        {/* About Section */}
+        <section className="px-6 md:px-12 lg:px-24 py-12 bg-gray-50">
+          <AboutMe />
+        </section>
+      </motion.main>
+
+      <Footer />
+    </div>
   );
 }
+
 export default Main_Banner;

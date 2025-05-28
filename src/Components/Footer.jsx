@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope, FaCode } from "react-ico
 
 function Footer() {
   return (
-    <footer className="bg-black lg shadow dark:bg-gray-700 m-4" style={{ width: "100%",margin:"0px" }}>
+    <footer className="bg-gray-900 lg shadow dark:bg-gray-700 m-4" style={{ width: "100%",margin:"0px" }}>
       <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         {/* Main Branding */}
         <div className="sm:flex sm:items-center sm:justify-between">

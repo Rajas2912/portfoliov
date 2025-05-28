@@ -16,6 +16,7 @@ import Temp_3 from "./Temp_components/Temp_3";
 import VerticalCardScroll from "./FramerMotion/VerticalCardScroll";
 import Contact_Page from "./ContactMe/ContactPage";
 import ContactPage from "./ContactMe/ContactPage";
+import Marquee from "./FrontPage/Marquee";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/certifications" element={<Certificate></Certificate>} />
         <Route path="/projects" element={<Project_page></Project_page>} />
         <Route path="/about" element={<About_Main></About_Main>} />
+        <Route path="/marquee" element={<Marquee></Marquee>} />
       </Routes>
     </BrowserRouter>
   );

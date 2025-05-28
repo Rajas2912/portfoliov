@@ -3,6 +3,7 @@ import patent1 from "../assets/Resources/PatentPublishReport.pdf";
 import resume from "../assets/Resources/resume.pdf";
 import nvidia from "../assets/Resources/nvidia.pdf";
 import iitmadras from "../assets/Resources/iitmadras.pdf";
+import coursera1 from "../assets/Resources/Coursera AWS Cloud 1.pdf";
 function SidebarWithIframe() {
   const [selectedCertificate, setSelectedCertificate] = useState(null);
 
@@ -22,6 +23,10 @@ function SidebarWithIframe() {
     {
       name: "Patent : Energy Saving Meter",
       pdfUrl: resume,
+    },
+    {
+      name: "AWS : Introduction to AWS Cloud and IT",
+      pdfUrl: coursera1,
     },
     // Add more certificates as needed
   ];
