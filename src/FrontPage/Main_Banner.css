@@ -20,24 +20,16 @@
 
 /* Theme colors */
 :root {
-  --primary-bg: #111111;
-  --secondary-bg: #1a1a1a;
-  --text-primary: #ffffff;
-  --text-secondary: #888888;
-  --accent: #333333;
+  --primary-bg: #ffffff;
+  --secondary-bg: #f3f4f6;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --accent: #1f2937;
 }
 
 .frontPage {
   background-color: var(--primary-bg);
   color: var(--text-primary);
-}
-
-.topDiv {
-  color: var(--text-primary);
-  padding: 20px;
-  font-size: 24px;
-  font-weight: bold;
-  background-color: var(--secondary-bg);
 }
 
 .container {
@@ -60,11 +52,13 @@
   font-size: 50px;
   font-weight: bold;
   color: var(--text-primary);
+  line-height: 1.2;
 }
 
 .lead {
-  font-size: 16px;
+  font-size: 18px;
   color: var(--text-secondary);
+  line-height: 1.6;
 }
 
 .colImage {
@@ -74,69 +68,62 @@
 }
 
 .bannerImage {
-  border-radius: 8px;
+  border-radius: 16px;
   max-width: 100%;
   height: auto;
-  border: 2px solid var(--accent);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
 }
 
-.bottomDiv {
-  color: var(--text-primary);
-  padding: 38px;
-  font-size: 24px;
-  font-weight: bold;
-  background-color: var(--secondary-bg);
-  border: 1px solid var(--accent);
+.btn1, .btn2 {
+  text-align: center;
+  padding: 12px 24px;
+  font-family: inherit;
+  font-size: 16px;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
 }
 
 .btn1 {
-  text-align: center;
-  color: var(--text-primary);
-  margin: 2px;
-  padding: 10px 20px;
-  font-family: inherit;
-  font-size: 15px;
-  border-radius: 20px;
   background-color: var(--accent);
-  transition: all 0.3s ease;
+  color: white;
 }
 
 .btn1:hover {
-  background-color: var(--text-primary);
-  color: var(--primary-bg);
+  background-color: #374151;
+  transform: translateY(-2px);
 }
 
 .btn2 {
-  text-align: center;
-  margin: 2px;
-  padding: 10px 20px;
-  font-family: inherit;
-  font-size: 15px;
-  border-radius: 20px;
-  background-color: var(--accent);
-  color: var(--text-primary);
-  transition: all 0.3s ease;
+  background-color: transparent;
+  border: 2px solid var(--accent);
+  color: var(--accent);
 }
 
 .btn2:hover {
-  background-color: var(--text-primary);
-  color: var(--primary-bg);
-}
-
-.bd2 {
-  color: var(--text-secondary);
-  font-size: 1rem;
-  font-weight: 500;
+  background-color: var(--secondary-bg);
+  transform: translateY(-2px);
 }
 
 .proj_title {
   color: var(--text-primary);
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-weight: bold;
   text-align: center;
-  padding: 10px;
-  margin: 10px 202px;
+  margin: 2rem 0;
 }
 
-.bd1 {
-  color: var(--text-primary);
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .colText, .colImage {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 40px;
+  }
 }
