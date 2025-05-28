@@ -10,11 +10,9 @@ import Footer from "../Components/Footer";
 import "./Main_Banner.css";
 import banner_img from "../assets/portrait.png";
 import HorizontalScroll from "../Components/HorizontalScroll";
-import ScrollingCards from "../Components/ScrollingCards";
 import SidebarWithIframe from "../Certifications/SidebarWithIframe";
 
 function Main_Banner() {
-  // Smooth scrolling setup
   useEffect(() => {
     const lenis = new Lenis();
     function raf(time) {
@@ -24,7 +22,6 @@ function Main_Banner() {
     requestAnimationFrame(raf);
   }, []);
 
-  // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -60,14 +57,13 @@ function Main_Banner() {
     }
   };
 
-  // Refs for section scrolling
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
   const certificationsRef = useRef(null);
   const skillsRef = useRef(null);
 
   return (
-    <div className="min-h-screen bg-white text-gray-900 font-sans">
+    <div className="min-h-screen bg-[#111111] text-white font-sans">
       <NewNavbar />
       
       <motion.main
@@ -77,7 +73,7 @@ function Main_Banner() {
         className="pt-24"
       >
         {/* Hero Section */}
-        <section className="px-6 md:px-12 lg:px-24 py-12 md:py-24">
+        <section className="px-6 md:px-12 lg:px-24 py-12 md:py-24 bg-[#111111]">
           <div className="container mx-auto">
             <motion.div 
               className="flex flex-col lg:flex-row items-center justify-between gap-12"
@@ -88,7 +84,7 @@ function Main_Banner() {
                 variants={itemVariants}
               >
                 <motion.p 
-                  className="text-lg text-gray-600"
+                  className="text-lg text-gray-400"
                   variants={itemVariants}
                 >
                   Hi I'm Rajas,
@@ -99,7 +95,7 @@ function Main_Banner() {
                   variants={itemVariants}
                 >
                   <span className="block">I build</span>
-                  <span className="font-medium text-black">
+                  <span className="font-medium text-white">
                     <Typewriter
                       words={['AI solutions', 'web experiences', 'scalable systems']}
                       loop={true}
@@ -113,7 +109,7 @@ function Main_Banner() {
                 </motion.h1>
                 
                 <motion.p 
-                  className="text-lg text-gray-600 max-w-lg"
+                  className="text-lg text-gray-400 max-w-lg"
                   variants={itemVariants}
                 >
                   AI enthusiast, full-stack developer, and innovator passionate about 
@@ -127,7 +123,7 @@ function Main_Banner() {
                 variants={imageVariants}
               >
                 <div className="relative">
-                  <div className="absolute -inset-4 bg-gray-200 rounded-2xl -z-10"></div>
+                  <div className="absolute -inset-4 bg-gray-800 rounded-2xl -z-10"></div>
                   <img
                     src={banner_img}
                     alt="Rajas Portrait"
@@ -140,50 +136,54 @@ function Main_Banner() {
         </section>
 
         {/* Marquee Section */}
-        <section className="py-12 bg-gray-50">
-          <div className="overflow-hidden">
-            <div className="flex animate-marquee whitespace-nowrap">
-              {[
-                { title: "Resume", count: "Download" },
-                { title: "Experience", count: "4+ Years" },
-                { title: "Projects", count: "15+" },
-                { title: "Certifications", count: "8+" },
-                { title: "Publications", count: "3" }
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  className="mx-4 p-4 bg-white rounded-lg shadow-md min-w-[200px] text-center"
-                >
-                  <h3 className="text-xl font-semibold">{item.title}</h3>
-                  <p className="text-gray-600">{item.count}</p>
+        <div className="relative overflow-hidden bg-[#1a1a1a] py-8">
+          <div className="flex whitespace-nowrap marquee-container">
+            <div className="animate-marquee flex">
+              {[...Array(2)].map((_, i) => (
+                <div key={i} className="flex">
+                  {[
+                    { title: "Resume", count: "Download" },
+                    { title: "Experience", count: "4+ Years" },
+                    { title: "Projects", count: "15+" },
+                    { title: "Certifications", count: "8+" },
+                    { title: "Publications", count: "3" }
+                  ].map((item, index) => (
+                    <div
+                      key={`${i}-${index}`}
+                      className="mx-4 p-6 bg-[#222222] rounded-lg min-w-[200px] text-center transform hover:scale-105 transition-transform duration-300"
+                    >
+                      <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
+                      <p className="text-gray-400">{item.count}</p>
+                    </div>
+                  ))}
                 </div>
               ))}
             </div>
           </div>
-        </section>
+        </div>
 
         {/* About Section */}
-        <section ref={aboutRef} id="about" className="py-24 bg-white">
+        <section ref={aboutRef} id="about" className="py-24 bg-[#111111]">
           <AboutMe />
         </section>
 
         {/* Projects Section */}
-        <section ref={projectsRef} id="projects" className="py-24 bg-gray-50">
+        <section ref={projectsRef} id="projects" className="py-24 bg-[#1a1a1a]">
           <div className="container mx-auto px-6">
-            <h2 className="text-3xl font-bold text-center mb-12">Featured Projects</h2>
+            <h2 className="text-3xl font-bold text-center mb-12 text-white">Featured Projects</h2>
             <HorizontalScroll />
           </div>
         </section>
 
         {/* Skills Section */}
-        <section ref={skillsRef} id="skills" className="py-24 bg-white">
+        <section ref={skillsRef} id="skills" className="py-24 bg-[#111111]">
           <SkillsSection />
         </section>
 
         {/* Certifications Section */}
-        <section ref={certificationsRef} id="certifications" className="py-24 bg-gray-50">
+        <section ref={certificationsRef} id="certifications" className="py-24 bg-[#1a1a1a]">
           <div className="container mx-auto px-6">
-            <h2 className="text-3xl font-bold text-center mb-12">Certifications</h2>
+            <h2 className="text-3xl font-bold text-center mb-12 text-white">Certifications</h2>
             <SidebarWithIframe />
           </div>
         </section>
